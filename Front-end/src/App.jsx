@@ -1,12 +1,11 @@
 import './index.css'
+import Navbar from './Components/Navbar'
 
 function App() {
 
   return (
     <>
-      <div>
-        <h1>Job Aggregator</h1>
-      </div>
+      <Navbar/>
     </>
   )
 }
