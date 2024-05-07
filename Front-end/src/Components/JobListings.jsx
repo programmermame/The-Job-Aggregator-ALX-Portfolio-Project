@@ -3,13 +3,13 @@ import { FaShieldAlt, FaMinus } from 'react-icons/fa';
 
 const JobListings = () => {
     const data = {
-        title:'Barista',
-        subtitle:'Eleven Madison Park',
-        location:'New York, NY',
-        via:'via Indeed',
-        jobPost:'23 hours ago',
-        type:'Full Time',
-        extensions:[
+        title: 'Barista',
+        subtitle: 'Eleven Madison Park',
+        location: 'New York, NY',
+        via: 'via Indeed',
+        jobPost: '23 hours ago',
+        type: 'Full Time',
+        extensions: [
             'No degree mentioned',
             'Health insurance'
         ]
@@ -62,7 +62,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.title}</p>
+                            <p className='ml-1'>{data.type}</p>
                         </div>
                     </div>
                     <div className='flex gap-4 text-sm justify-center'>
@@ -72,7 +72,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>data.extensions[0]}></p>/p>
+                            <p className='ml-1'>{data.extensions[1]}</p>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.title}</p>
+                            <p className='ml-1'>{data.type}</p>
                         </div>
                     </div>
                     <div className='flex gap-4 text-sm justify-center'>
@@ -103,7 +103,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>data.extensions[0]}></p>/p>
+                            <p className='ml-1'>{data.extensions[1]}</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.title}</p>
+                            <p className='ml-1'>{data.type}</p>
                         </div>
                     </div>
                     <div className='flex gap-4 text-sm justify-center'>
@@ -134,7 +134,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>data.extensions[0]}></p>/p>
+                            <p className='ml-1'>{data.extensions[1]}</p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.title}</p>
+                            <p className='ml-1'>{data.type}</p>
                         </div>
                     </div>
                     <div className='flex gap-4 text-sm justify-center'>
@@ -165,7 +165,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>data.extensions[0]}></p>/p>
+                            <p className='ml-1'>{data.extensions[1]}</p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.title}</p>
+                            <p className='ml-1'>{data.type}</p>
                         </div>
                     </div>
                     <div className='flex gap-4 text-sm justify-center'>
@@ -196,7 +196,7 @@ const JobListings = () => {
                         </div>
                         <div className='flex text-gray-600 items-center'>
                             <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>data.extensions[0]}></p>/p>
+                            <p className='ml-1'>{data.extensions[1]}</p>
                         </div>
                     </div>
                 </div>
