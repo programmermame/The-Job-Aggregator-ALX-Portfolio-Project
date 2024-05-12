@@ -1,206 +1,51 @@
-import { FiClock, FiBriefcase } from 'react-icons/fi';
-import { FaShieldAlt, FaMinus } from 'react-icons/fa';
+
+import { FaBookmark } from 'react-icons/fa';
 
 const JobListings = () => {
     const data = {
         title: 'Barista',
-        subtitle: 'Eleven Madison Park',
+        company_name: 'Eleven Madison Park',
+        description: 'We are seeking a Barista for our coffee counter and cafe Easy Victor...',
         location: 'New York, NY',
-        via: 'via Indeed',
+        via: 'Via Indeed',
         jobPost: '23 hours ago',
         type: 'Full Time',
         extensions: [
-            'No degree mentioned',
+            'No degree mentioned', 
             'Health insurance'
         ]
     }
     return (
-        <div className='grid grid-cols-1 md:grid-cols-1 gap-4 p-3'>
+        <div className='grid grid-cols-1 xl:grid-cols-3 gap-5 p-3 overflow-y-auto flex-1'>
             {/* Job Listing 1 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white w-auto h-auto">
-                <div className="w-16 h-16 bg-green-200 flex-none"></div>
-                <div className="ml-5 flex-grow">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>{data.location}</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
+            {
+                Array.from({ length: 50 }, (_, index) =>
+                    <div key={index} className='border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white'>
+                        <div className='flex'>
+                            <div className='w-16 h-16 bg-red-400 rounded-lg'></div>
+                            <div className='ml-3'>
+                                <h1 className='font-extrabold text-lg'>{data.title}</h1>
+                                <p className='text-gray-500'>{data.location}</p>
+                            </div>
                         </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
+                        <div className='mt-3 text-gray-500'>
+                            {data.description}
                         </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
+                        <div className='mt-3 flex gap-4 text-xs'>
+                            <p className='w-auto h-auto bg-gray-100 p-1 rounded'>{data.via}</p>
+                            <p className='w-auto h-auto bg-gray-100 p-1 rounded'>{data.type}</p>
+                            <p className='w-auto h-auto bg-gray-100 p-1 rounded'>{data.jobPost}</p>
                         </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
+                        <div className='grid grid-cols-3 gap-x-20 mt-5 text-xs'>
+                            <button className='w-24 h-auto border p-2 rounded-lg bg-gray-100 hover:bg-green-200'>Detail</button>
+                            <button className='w-24 h-auto border p-2 rounded-lg bg-gray-100 hover:bg-green-200'>Apply Now</button>
+                            <button className=''><FaBookmark className="w-4 h-4" /></button>
                         </div>
                     </div>
-                </div>
-            </div>
+                )
+            }
 
-            {/* Job Listing 2 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white">
-                <div className="w-16 h-16 bg-green-200"></div>
-                <div className="ml-5">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>New York, NY</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
-                        </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            {/* Job Listing 3 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white">
-                <div className="w-16 h-16 bg-green-200"></div>
-                <div className="ml-5">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>New York, NY</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
-                        </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Job Listing 3 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white">
-                <div className="w-16 h-16 bg-green-200"></div>
-                <div className="ml-5">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>New York, NY</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
-                        </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Job Listing 3 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white">
-                <div className="w-16 h-16 bg-green-200"></div>
-                <div className="ml-5">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>New York, NY</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
-                        </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Job Listing 3 */}
-            <div className="flex border shadow-xl p-4 rounded-lg bg-gray-50 hover:bg-white">
-                <div className="w-16 h-16 bg-green-200"></div>
-                <div className="ml-5">
-                    <h2 className="font-extrabold">{data.title}</h2>
-                    <p>Eleven Madison Park</p>
-                    <p className='text-gray-600'>New York, NY</p>
-                    <p className='mb-4 text-gray-600'>{data.via}</p>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiClock className="w-4 h-4" />
-                            <p className='ml-1'>{data.jobPost}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FiBriefcase className="w-4 h-4" />
-                            <p className='ml-1'>{data.type}</p>
-                        </div>
-                    </div>
-                    <div className='flex gap-4 text-xs justify-center'>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaMinus className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[0]}</p>
-                        </div>
-                        <div className='flex text-gray-600 items-center'>
-                            <FaShieldAlt className="w-4 h-4" />
-                            <p className='ml-1'>{data.extensions[1]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };
